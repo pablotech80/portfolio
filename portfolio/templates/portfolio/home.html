@@ -6,6 +6,8 @@
     <title>Portfolio - Pablo Techera</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -16,20 +18,13 @@
         }
         h1, h2, h3 {
             font-family: 'Roboto', sans-serif;
-            color: #ffffff;
-        }
-        .navbar-brand {
-            font-family: 'Fira Code', monospace;
-            font-size: 1.5rem;
+            color: #66fcf1;
         }
         .navbar-dark .nav-link {
             color: #c5c6c7;
         }
         .navbar-dark .nav-link:hover {
             color: #66fcf1;
-        }
-        .rounded-circle {
-            border: 4px solid #66fcf1;
         }
         .btn-custom {
             background-color: #66fcf1;
@@ -40,66 +35,297 @@
             background-color: #45a29e;
             color: white;
         }
-        .bio {
-            font-size: 1.2rem;
+        .rounded-circle {
+            border: 5px solid #66fcf1;
+        }
+        .accordion-button {
+            background-color: #2c2c2c;
             color: #c5c6c7;
-            line-height: 1.6;
+        }
+        .accordion-button:hover {
+            background-color: #66fcf1;
+            color: #1e1e1e;
         }
         footer {
             text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
+            margin-top: 50px;
             color: #888;
+        }
+        footer a {
+            color: #66fcf1;
+        }
+        footer a:hover {
+            text-decoration: none;
+            color: #45a29e;
         }
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Portfolio </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#repositories">Repos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/media/curriculum.pdf" download>Download CV</a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#bio">Bio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#referral">Referral</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aspirations">Aspirations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Main Section -->
-    <div class="container mt-5 text-center">
-        <!-- Profile Picture -->
-        <img src="{{ personal_info.profile_picture.url }}" alt="Profile Picture" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
-        <!-- Name -->
-        <h1>{{ personal_info.name }}</h1>
-        <!-- Biography -->
-        <p class="bio">{{ personal_info.bio }}</p>
-        <!-- CV Download Button -->
-        <a href="/media/curriculum.pdf" class="btn btn-custom mt-3" download>Download CV</a>
-    </div>
+    <section id="main" class="container mt-5 text-center">
+        <img src="{{ personal_info.profile_picture.url }}" alt="Profile Picture" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid #66fcf1;">
+        <h1>Pablo Techera</h1>
+        <p class="lead">Junior Python Developer | Data Analysis & API Specialist</p>
+        <a href="/media/curriculum.pdf" class="btn btn-custom mb-3" download>Download CV</a>
+        <div>
+            <a href="https://www.linkedin.com/in/pablo-tech" class="btn btn-outline-light me-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/pablotech80" class="btn btn-outline-light" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </section>
 
-    <!-- Repositories Section -->
-    <div id="repositories" class="container mt-5">
-        <h2>My Repositories</h2>
-        <ul class="list-unstyled mt-3">
-            <li><a href="https://github.com/pablotech80" target="_blank">GitHub</a></li>
-            <li><a href="https://gitlab.com/pablotech80" target="_blank">GitLab</a></li>
-        </ul>
+    <!-- Bio Section -->
+    <section id="bio" class="container mt-5">
+        <h2 class="text-center">Bio</h2>
+        <div class="accordion mt-4" id="bioAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bioContent" aria-expanded="false" aria-controls="bioContent">
+                        About Me
+                    </button>
+                </h2>
+                <div id="bioContent" class="accordion-collapse collapse" data-bs-parent="#bioAccordion">
+                    <div class="accordion-body">
+                        <p>
+                            I am a Junior Python Developer passionate about crafting scalable and efficient solutions. Focused on continuous learning, I specialize in Python development and actively enhance my skills in SQL/NoSQL databases. My projects, like the API Body Analyzer, reflect my commitment to innovation and problem-solving.
+                        </p>
+                        <p>
+                            Explore my portfolio to learn more about my work, access my GitHub repositories, and download my résumé. Let’s connect and collaborate on impactful projects!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <!-- Education Section -->
+    <section id="education" class="container mt-5">
+        <h2 class="text-center">Education</h2>
+        <div class="accordion mt-4" id="educationAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#edu1" aria-expanded="false" aria-controls="edu1">
+                        2022 - 2024: Python Developer Program
+                    </button>
+                </h2>
+                <div id="edu1" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        Tokio School: Specialized in Python programming, Agile Scrum methodology.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#edu2" aria-expanded="false" aria-controls="edu2">
+                        2024: SQL Database Management
+                    </button>
+                </h2>
+                <div id="edu2" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                    <div class="accordion-body">
+                        Tokio School: Focused on SQL database management and development.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="container mt-5">
+    <h2 class="text-center">Skills</h2>
+    <div class="accordion mt-4" id="skillsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pythonSkills" aria-expanded="false" aria-controls="pythonSkills">
+                    Python
+                </button>
+            </h2>
+            <div id="pythonSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Pandas, Tkinter, Flask, API, Django
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sqlSkills" aria-expanded="false" aria-controls="sqlSkills">
+                    SQL
+                </button>
+            </h2>
+            <div id="sqlSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    PostgreSQL, MongoDB
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#containerSkills" aria-expanded="false" aria-controls="containerSkills">
+                    Containers & Virtualization
+                </button>
+            </h2>
+            <div id="containerSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Docker, VirtualBox
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#versionControlSkills" aria-expanded="false" aria-controls="versionControlSkills">
+                    Version Control
+                </button>
+            </h2>
+            <div id="versionControlSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Git, GitHub, GitLab
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#apiSkills" aria-expanded="false" aria-controls="apiSkills">
+                    API Development & Testing
+                </button>
+            </h2>
+            <div id="apiSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Postman
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#agileSkills" aria-expanded="false" aria-controls="agileSkills">
+                    Agile Methodologies
+                </button>
+            </h2>
+            <div id="agileSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Scrum Manager
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectManagementSkills" aria-expanded="false" aria-controls="projectManagementSkills">
+                    Project Management
+                </button>
+            </h2>
+            <div id="projectManagementSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Jira
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#developmentEnvironmentSkills" aria-expanded="false" aria-controls="developmentEnvironmentSkills">
+                    Development Environment
+                </button>
+            </h2>
+            <div id="developmentEnvironmentSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    Jupyter Notebook
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="container mt-5">
+        <h2 class="text-center">Experience</h2>
+        <div class="accordion mt-4" id="experienceAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp1" aria-expanded="false" aria-controls="exp1">
+                        Taunais Research LLC - Junior Python Developer
+                    </button>
+                </h2>
+                <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Conducted data analysis and cleansing for trading models.</li>
+                            <li>Developed Python scripts to preprocess data and identify key patterns.</li>
+                            <li>Used Docker, Kubernetes, AWS for efficient data scaling and storage.</li>
+                            <li>Optimized data processes, reducing processing time by 30%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2">
+                        Ignitus.org - Junior Python Developer
+                    </button>
+                </h2>
+                <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Collaborated on data analysis projects with social impact.</li>
+                            <li>Performed Exploratory Data Analysis (EDA) to identify trends and insights.</li>
+                            <li>Improved precision and quality of insights using Python and optimization techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section id="referral" class="container mt-5">
+        <h2 class="text-center">Referral</h2>
+        <blockquote class="blockquote text-center">
+            <p>"I strongly recommend Pablo as a Junior Python Developer with exceptional potential and a proactive approach to learning and growth. His work with data management and analysis is commendable."</p>
+            <footer class="blockquote-footer">LinkedIn Recommendation</footer>
+        </blockquote>
+    </section>
+
+    <!-- Aspirations Section -->
+    <section id="aspirations" class="container mt-5">
+        <h2 class="text-center">Aspirations</h2>
+        <p>
+            My objective is to continue developing as a Python developer, expanding my skills in backend and frontend development. I am eager to participate in challenging projects where I can contribute my knowledge in Python, SQL, and agile methodologies, while growing as a professional.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mt-5">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center">Feel free to reach out via email or connect on my social networks.</p>
+        <div class="text-center">
+            <a href="mailto:ptecherasosa@icloud.com" class="btn btn-custom"><i class="fas fa-envelope"></i> Email Me</a>
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://www.linkedin.com/in/pablo-tech" target="_blank" class="btn btn-outline-light me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/pablotech80" target="_blank" class="btn btn-outline-light"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="mt-5">
+    <footer>
         <p>© 2024 Pablo Techera | Powered by Django</p>
     </footer>
 
@@ -107,4 +333,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
