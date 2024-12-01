@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio - Pablo Techera</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Google Fonts -->
@@ -16,22 +16,7 @@
         }
         h1, h2, h3 {
             font-family: 'Roboto', sans-serif;
-        }
-        a {
-            color: #66fcf1;
-        }
-        a:hover {
-            color: #45a29e;
-            text-decoration: none;
-        }
-        .btn-custom {
-            background-color: #66fcf1;
-            color: #1e1e1e;
-            border: none;
-        }
-        .btn-custom:hover {
-            background-color: #45a29e;
-            color: white;
+            color: #ffffff;
         }
         .navbar-brand {
             font-family: 'Fira Code', monospace;
@@ -46,26 +31,43 @@
         .rounded-circle {
             border: 4px solid #66fcf1;
         }
+        .btn-custom {
+            background-color: #66fcf1;
+            color: #1e1e1e;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #45a29e;
+            color: white;
+        }
+        .bio {
+            font-size: 1.2rem;
+            color: #c5c6c7;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
-    <!-- Barra de navegación -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">My Portfolio</a>
+            <a class="navbar-brand" href="#">Portfolio </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">About me</a>
+                        <a class="nav-link" href="#">About me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#repos">Repos</a>
+                        <a class="nav-link" href="#repositories">Repos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/media/curriculum.pdf" download>Download CV</a>
@@ -75,45 +77,34 @@
         </div>
     </nav>
 
-    <!-- Información personal -->
-    <div class="container mt-5">
-        <div class="d-flex flex-column align-items-center text-center">
-            <img src="{{ personal_info.profile_picture.url }}" alt="Foto de Perfil" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
-            <h1 class="text-light">{{ personal_info.name }}</h1>
-            <p class="lead text-muted">{{ personal_info.bio }}</p>
-            <a href="/media/curriculum.pdf" class="btn btn-custom" download>Download CV</a>
-        </div>
+    <!-- Main Section -->
+    <div class="container mt-5 text-center">
+        <!-- Profile Picture -->
+        <img src="{{ personal_info.profile_picture.url }}" alt="Profile Picture" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+        <!-- Name -->
+        <h1>{{ personal_info.name }}</h1>
+        <!-- Biography -->
+        <p class="bio">{{ personal_info.bio }}</p>
+        <!-- CV Download Button -->
+        <a href="/media/curriculum.pdf" class="btn btn-custom mt-3" download>Download CV</a>
     </div>
 
-    <!-- Proyectos -->
-    <div id="projects" class="container mt-5">
-        <h2>My Projects</h2>
-        <div class="row">
-            {% for project in projects %}
-            <div class="col-md-4">
-                <div class="card bg-dark text-light mb-4">
-                    {% if project.image %}
-                    <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ project.title }}</h5>
-                        <p class="card-text">{{ project.description }}</p>
-                        <a href="{{ project.demo_url }}" class="btn btn-custom" target="_blank">Ver Demo</a>
-                        <a href="{{ project.code_url }}" class="btn btn-outline-light" target="_blank">Ver Código</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Repositorios -->
-    <div id="repos" class="container mt-5">
+    <!-- Repositories Section -->
+    <div id="repositories" class="container mt-5">
         <h2>My Repositories</h2>
-        <ul>
-            <li><a href="https://github.com/tuusuario" target="_blank">GitHub</a></li>
-            <li><a href="https://gitlab.com/tuusuario" target="_blank">GitLab</a></li>
+        <ul class="list-unstyled mt-3">
+            <li><a href="https://github.com/pablotech80" target="_blank">GitHub</a></li>
+            <li><a href="https://gitlab.com/pablotech80" target="_blank">GitLab</a></li>
         </ul>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <p>© 2024 Pablo Techera | Powered by Django</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
