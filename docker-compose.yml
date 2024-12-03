@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    command: gunicorn DjangoProject.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      - DEBUG=False
+      - ALLOWED_HOSTS=127.0.0.1,localhost,your-heroku-app.herokuapp.com
+      - DATABASE_URL=postgres://django_user:password123@db:5432/django_db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: django_user
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: django_db
+    ports:
+      - "5432:5432"
