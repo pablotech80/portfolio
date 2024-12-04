@@ -18,4 +18,5 @@ venv/
 # Ignorar archivos de configuración específicos del IDE
 .idea/
 *.iml
+static/temp/
 
