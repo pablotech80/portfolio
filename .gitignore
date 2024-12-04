@@ -1,22 +1,31 @@
-# Ignorar archivos de caché de Python
+# Archivos de Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Ignorar configuraciones de entornos virtuales
+# Entornos virtuales
 .venv/
 env/
 venv/
 
-# Ignorar archivos de bases de datos locales
-*.sqlite3
+# Archivos del sistema
+.DS_Store
+Thumbs.db
 
-# Ignorar archivos de migración compilados
-*/migrations/__pycache__/
-
-# Ignorar archivos de configuración específicos del IDE
+# Configuraciones de PyCharm
 .idea/
 *.iml
-static/temp/
 
+# Bases de datos locales
+db.sqlite3
+
+# Archivos multimedia
+media/
+
+# Archivos estáticos
+staticfiles/
+
+# Archivos generados por Docker
+*.log
+docker-compose.override.yml
