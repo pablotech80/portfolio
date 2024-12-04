@@ -1,0 +1,21 @@
+# Ignorar archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar configuraciones de entornos virtuales
+.venv/
+env/
+venv/
+
+# Ignorar archivos de bases de datos locales
+*.sqlite3
+
+# Ignorar archivos de migración compilados
+*/migrations/__pycache__/
+
+# Ignorar archivos de configuración específicos del IDE
+.idea/
+*.iml
+
