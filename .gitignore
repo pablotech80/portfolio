@@ -22,6 +22,9 @@ venv/
 
 ENV/
 
+.env/
+
+
 # IDE Configurations
 .idea/
 .vscode/
