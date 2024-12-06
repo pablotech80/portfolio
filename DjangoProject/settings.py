@@ -26,11 +26,7 @@ SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs
 DEBUG = False
 
 # ALLOWED_HOSTS configurado manualmente para portafolio estático
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'pablotech.dev', 'www.pablotech.dev']
-
-
-
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
