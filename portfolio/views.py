@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import PersonalInfo, Project
 
+
+
 def home(request):
     personal_info = PersonalInfo.objects.first()  # Recuperar la primera entrada
     projects = Project.objects.all()  # Recuperar todos los proyectos
@@ -9,3 +11,5 @@ def home(request):
         'personal_info': personal_info,
         'projects': projects,
     })
+
+
