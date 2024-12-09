@@ -21,5 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Exponemos el puerto 8000 para el servidor de Django
 EXPOSE 8000
 
+RUN python manage.py migrate
+
 # Comando para ejecutar la aplicación usando Gunicorn
 CMD ["gunicorn", "DjangoProject.wsgi:application", "--bind", "0.0.0.0:8000"]
