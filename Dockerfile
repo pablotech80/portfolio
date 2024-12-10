@@ -17,6 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copiamos los archivos del proyecto al contenedor
 COPY . /app
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 # Instalamos las dependencias de Python usando el archivo requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
