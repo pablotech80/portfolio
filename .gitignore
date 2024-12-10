@@ -1,5 +1,6 @@
 # Archivos de entorno
 .venv/
+.venv
 .env
 *.env
 logs/
