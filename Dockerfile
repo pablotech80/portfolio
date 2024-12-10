@@ -4,6 +4,8 @@ FROM python:3.11-slim
 # Establecemos el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
+COPY requirements.txt .
+
 # Instalamos las dependencias necesarias del sistema
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
