@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ("bio", models.TextField()),
                 (
                     "profile_picture",
-                    models.ImageField(blank=True, null=True, upload_to="profile/"),
+                    models.ImageField(blank=True, null=True, upload_to= 'media/profile_pics'),
                 ),
             ],
         ),
@@ -46,7 +46,7 @@ class Migration(migrations.Migration):
                 ("description", models.TextField()),
                 (
                     "image",
-                    models.ImageField(blank=True, null=True, upload_to="projects/"),
+                    models.ImageField(blank=True, null=True, upload_to= "media/profile_pics"),
                 ),
                 ("demo_url", models.URLField(blank=True, null=True)),
                 ("code_url", models.URLField(blank=True, null=True)),
