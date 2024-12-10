@@ -1,6 +1,8 @@
 # Archivos de entorno
+.venv/
 .env
 *.env
+logs/
 
 # Archivos de Python
 *.pyc
@@ -26,5 +28,5 @@ media/
 docker-compose.override.yml
 
 # Archivos de sistema
-.DS_Store
+.DS_Store/
 Thumbs.db
