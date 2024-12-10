@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS configurado manualmente para portafolio estático
 ALLOWED_HOSTS = ['*']
