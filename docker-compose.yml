@@ -1,0 +1,19 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: gunicorn DjangoProject.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"  # Mapea el puerto 8000 del contenedor al host
+    volumes:
+      - .:/app
+      - ./media:/app/media
+      - ./static:/app/static
+    environment:
+      DEBUG: "False"
+      ALLOWED_HOSTS: "127.0.0.1,localhost,116.203.18.47,pablotech.dev,www.pablotech.dev"
+
+volumes:
+  media:
+  static:
