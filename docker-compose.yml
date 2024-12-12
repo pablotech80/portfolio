@@ -5,11 +5,16 @@ services:
       dockerfile: Dockerfile
     command: gunicorn DjangoProject.wsgi:application --bind 0.0.0.0:8000
     ports:
+<<<<<<< HEAD
       - "8000:8000"  # Mapea el puerto 8000 del contenedor al host
+=======
+      - "80:8000"  # Mapea el puerto 8000 del contenedor al host
+>>>>>>> end_version
     volumes:
       - .:/app
       - ./media:/app/media
       - ./static:/app/static
+<<<<<<< HEAD
     depends_on:
       - db
     environment:
@@ -25,6 +30,11 @@ services:
       POSTGRES_DB: django_db
     ports:
       - "5432:5432"  # Esto ahora está correctamente alineado
+=======
+    environment:
+      DEBUG: "False"
+      ALLOWED_HOSTS: "127.0.0.1,localhost,116.203.18.47,pablotech.dev,www.pablotech.dev"
+>>>>>>> end_version
 
 volumes:
   media:

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python
 *.py[cod]
 __pycache__/
@@ -39,3 +40,38 @@ node_modules/
 # Other
 *.swp
 *.swo
+=======
+# Archivos de entorno
+.venv/
+.venv
+.env
+*.env
+logs/
+
+# Archivos de Python
+*.pyc
+__pycache__/
+
+# Archivos de configuración
+*.sqlite3
+/db.sqlite3
+*.log
+
+# Archivos estáticos y medios
+staticfiles/
+media/
+
+# Configuración de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+
+# Archivos de sistema
+.DS_Store/
+Thumbs.db
+>>>>>>> end_version
