@@ -1,16 +1,16 @@
-<<<<<<< HEAD
+
 # Python
-*.py[cod]
+
 __pycache__/
 *.so
 *.pyc
 *.pyo
 *.pyd
+*.py[cod]
 
 # Django
 *.log
 *.pot
-*.pyc
 db.sqlite3
 media/
 
@@ -31,7 +31,7 @@ ENV/
 .vscode/
 
 # OS generated files
-.DS_Store
+.DS_Store/
 Thumbs.db
 
 # Node (if using npm for frontend assets)
@@ -41,37 +41,23 @@ node_modules/
 *.swp
 *.swo
 =======
-# Archivos de entorno
-.venv/
-.venv
-.env
-*.env
+
 logs/
 
-# Archivos de Python
-*.pyc
-__pycache__/
+
 
 # Archivos de configuración
 *.sqlite3
 /db.sqlite3
-*.log
+
 
 # Archivos estáticos y medios
 staticfiles/
-media/
 
-# Configuración de IDEs
-.vscode/
-.idea/
-*.iml
+
 
 # Docker
 *.pid
 *.sock
 docker-compose.override.yml
 
-# Archivos de sistema
-.DS_Store/
-Thumbs.db
->>>>>>> end_version
