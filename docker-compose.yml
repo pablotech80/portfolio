@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: gunicorn DjangoProject.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn DjangoProject.wsgi:application --bind 0.0.0.0:8000 --certfile=/path/to/cert.pem --keyfile=/path/to/key.pem
+
     ports:
       - "80:8000"  # Mapea el puerto 8000 del contenedor al puerto 80 del host
     volumes:
