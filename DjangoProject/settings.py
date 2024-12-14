@@ -18,6 +18,8 @@ SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs
 # ALLOWED_HOSTS configurado manualmente para portafolio estático
 
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+print(f"DEBUG is set to: {DEBUG}")
+
 
 ALLOWED_HOSTS = ['portfolio-production-5731.up.railway.app', 'localhost', '127.0.0.1']
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -121,5 +124,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+# WhiteNoise Settings
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
