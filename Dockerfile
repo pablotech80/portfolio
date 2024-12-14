@@ -20,6 +20,9 @@ COPY . /app
 # Instalamos las dependencias de Python usando el archivo requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Ejecuta collectstatic para manejar archivos estáticos
+RUN python manage.py collectstatic --noinput
+
 # Exponemos el puerto 8000 para el servidor de Django
 EXPOSE 8000
 
