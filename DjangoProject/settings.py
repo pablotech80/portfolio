@@ -19,7 +19,7 @@ SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs
 
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['portfolio-web-01.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['portfolio-production-5731.up.railway.app', 'localhost', '127.0.0.1']
 
 
 
