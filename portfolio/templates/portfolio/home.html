@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Pablo Techera</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -81,19 +81,17 @@
         </div>
     </div>
 </nav>
-
     <!-- Main Section -->
     <section id="main" class="container mt-5 text-center">
-        <img src="/media/profile/F607EAEC-E0CE-4FDF-BA20-AF871D7DD1A3_1_201_a.jpeg" alt="Profile Picture" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid #66fcf1;">
         <h1>Pablo Techera</h1>
-        <p class="lead">Junior Python Developer | Data Analysis & API Specialist</p>
-        <a href="/media/curriculum.pdf" class="btn btn-custom mb-3" download>Download CV</a>
+        <img src="/media/avatar.jpeg" alt="Avatar" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid #66fcf1;">
+        <p class="lead">Junior Python Developer | Data Analysis & API´s</p>
+        <a href="/media/curriculum_pab_tech.pdf" class="btn btn-custom mb-3" download>Download CV</a>
         <div>
             <a href="https://www.linkedin.com/in/pablo-tech" class="btn btn-outline-light me-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/pablotech80" class="btn btn-outline-light" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </section>
-
     <!-- Bio Section -->
     <section id="bio" class="container mt-5">
         <h2 class="text-center">Bio</h2>
@@ -118,9 +116,8 @@
         </div>
     </section>
 </body>
-
-    <!-- Education Section -->
-<section id="education" class="container mt-5">
+        <!-- Education Section -->
+    <section id="education" class="container mt-5">
     <h2 class="text-center">Education</h2>
     <div class="accordion mt-4" id="educationAccordion">
         <!-- Tokio School: Python Developer Program -->
@@ -132,19 +129,33 @@
             </h2>
             <div id="edu1" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                 <div class="accordion-body">
-                    <p>Specialized in Python programming, Agile Scrum methodology.</p>
+                    <p>Specialized in Python programming.</p>
                     <img src="https://img.shields.io/badge/Tokio%20School-0099CC?style=for-the-badge&logo=school&logoColor=white" alt="Tokio School">
+                </div>
+            </div>
+        </div>
+        <!-- Tokio School: Scrum Master Program -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#edu2" aria-expanded="false" aria-controls="edu2">
+                    2022 - 2024: Scrum Master Program
+                </button>
+            </h2>
+            <div id="edu2" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div class="accordion-body">
+                    <p>Focused on Agile methodologies and Scrum framework.</p>
+                    <img src="https://img.shields.io/badge/Scrum%20Master-6DB33F?style=for-the-badge&logo=scrum&logoColor=white" alt="Scrum Master">
                 </div>
             </div>
         </div>
         <!-- Tokio School: SQL Database Management -->
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#edu2" aria-expanded="false" aria-controls="edu2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#edu3" aria-expanded="false" aria-controls="edu3">
                     2024: SQL Database Management
                 </button>
             </h2>
-            <div id="edu2" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+            <div id="edu3" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                 <div class="accordion-body">
                     <p>Focused on SQL database management and development.</p>
                     <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL">
@@ -153,8 +164,26 @@
         </div>
     </div>
 </section>
-
-    <!-- Skills Section -->
+        <!-- Languages Section -->
+<section id="languages" class="container mt-5">
+    <h2 class="text-center">Languages</h2>
+    <div class="accordion mt-4" id="languagesAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lang1" aria-expanded="false" aria-controls="lang1">
+                    2024: English Proficiency
+                </button>
+            </h2>
+            <div id="lang1" class="accordion-collapse collapse" data-bs-parent="#languagesAccordion">
+                <div class="accordion-body">
+                    <p>Advanced English course completed at Tokio School.</p>
+                    <img src="https://img.shields.io/badge/English-0052CC?style=for-the-badge&logo=language&logoColor=white" alt="English">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Skills Section -->
 <section id="skills" class="container mt-5">
     <h2 class="text-center">Skills</h2>
     <div class="accordion mt-4" id="skillsAccordion">
@@ -268,8 +297,7 @@
         </div>
     </div>
 </section>
-
-    <!-- Experience Section -->
+        <!-- Experience Section -->
     <section id="experience" class="container mt-5">
         <h2 class="text-center">Experience</h2>
         <div class="accordion mt-4" id="experienceAccordion">
@@ -308,8 +336,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Referral Section -->
+        <!-- Referral Section -->
     <section id="referral" class="container mt-5">
         <h2 class="text-center">Referral</h2>
         <blockquote class="blockquote text-center">
@@ -317,16 +344,14 @@
             <footer class="blockquote-footer">LinkedIn Recommendation</footer>
         </blockquote>
     </section>
-
-    <!-- Aspirations Section -->
+        <!-- Aspirations Section -->
     <section id="aspirations" class="container mt-5">
         <h2 class="text-center">Aspirations</h2>
         <p>
             My objective is to continue developing as a Python developer, expanding my skills in backend and frontend development. I am eager to participate in challenging projects where I can contribute my knowledge in Python, SQL, and agile methodologies, while growing as a professional.
         </p>
     </section>
-
-    <!-- Contact Section -->
+        <!-- Contact Section -->
     <section id="contact" class="container mt-5">
         <h2 class="text-center">Contact</h2>
         <p class="text-center">Feel free to reach out via email or connect on my social networks.</p>
@@ -338,13 +363,10 @@
             <a href="https://github.com/pablotech80" target="_blank" class="btn btn-outline-light"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </section>
-
-    <!-- Footer -->
+        <!-- Footer -->
     <footer>
         <p>© 2024 Pablo Techera | Powered by Django</p>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+        <!-- Bootstrap JS -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </html>

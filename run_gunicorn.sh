@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Activar el entorno virtual
-source ~/DjangoProject/.venv/bin/activate
+source ~ / DjangoProject/.venv/bin/activate
 
 # Ejecutar Gunicorn directamente en el puerto 80
 gunicorn DjangoProject.wsgi:application \

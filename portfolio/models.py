@@ -3,7 +3,7 @@ from django.db import models
 class PersonalInfo(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField()
-    profile_picture = models.ImageField(upload_to='media/profile/', blank=True, null=True)
+    profile_picture = models.ImageField(upload_to = 'media/', blank = True, null = True)
 
     def __str__(self):
         return self.name

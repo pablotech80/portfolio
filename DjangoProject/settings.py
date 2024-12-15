@@ -17,7 +17,7 @@ SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs
 
 # ALLOWED_HOSTS configurado manualmente para portafolio estático
 
-DEBUG = os.getenv('DEBUG', 'False').lower() == 'True'
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 print(f"DEBUG is set to: {DEBUG}")
 
 

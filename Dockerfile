@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar el resto del proyecto
 COPY . /app/
+COPY ./media /app/media
 
 # Recolectar archivos estáticos
 RUN python manage.py collectstatic --noinput
