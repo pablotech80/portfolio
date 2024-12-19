@@ -1,107 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Pablo Techera</title>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres, UTF-8 es el estándar para admitir caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsivo en dispositivos móviles. -->
+    <title>Portfolio - Pablo Techera</title> <!-- Título de la página mostrado en la pestaña del navegador. -->
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"> <!-- Carga las fuentes Manrope e Inter para títulos y contenido respectivamente. -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> <!-- Incluye los estilos de Bootstrap para un diseño responsivo y moderno. -->
     <!-- Icons -->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Carga los iconos de Font Awesome para usar en botones y enlaces. -->
     <style>
+        /* Estilo general del cuerpo */
         body {
-            font-family: 'Inter', 'Neo-Grotesk', sans-serif;
-            background: linear-gradient(120deg, #1e1e1e, #1f2023);
-            color: #c5c6c7;
-            animation: gradient-animation 1s infinite alternate;
+            font-family: 'Inter', sans-serif; /* Fuente principal para el contenido. */
+            background: linear-gradient(120deg, #1e1e1e, #2a2a2a); /* Fondo con degradado oscuro para dar profundidad. */
+            color: #c5c6c7; /* Color de texto base. */
+            animation: gradient-animation 6s infinite alternate; /* Animación sutil para el fondo. */
         }
         @keyframes gradient-animation {
             0% { background-position: 0 50%; }
             100% { background-position: 100% 50%; }
         }
+        /* Estilos para títulos */
         h1, h2, h3 {
-            font-family: 'Manrope', 'Neo-Grotesk', sans-serif;
-            color: #66fcf1;
-            transition: all 0.5s ease-in-out;
+            font-family: 'Manrope', sans-serif; /* Fuente secundaria para títulos. */
+            color: #66fcf1; /* Azul brillante para títulos. */
+            transition: all 0.5s ease-in-out; /* Transición suave para cambios en hover. */
         }
         h1:hover {
-            color: #45a29e;
-            transform: scale(1.1);
-        }
-        .navbar-dark .nav-link {
-            color: #c5c6c7;
-            transition: color 0.3s;
-        }
-        .navbar-dark .nav-link:hover {
-            color: #66fcf1;
-        }
-        .accordion-item {
-            background-color: #1f2023;
-            border: 1px solid #66fcf1;
-            border-radius: 2px;
-        }
-        .accordion-header {
-            color: #66fcf1;
-        }
-        .accordion-button {
-            background-color: #1f2023;
-            color: #c5c6c7;
-            transition: all 0.3s ease-in-out;
-        }
-        .accordion-body {
-            color: #c5c6c7; /* Texto claro para mejor legibilidad */
-            background-color: #1f2023; /* Opcional: un fondo consistente con los botones */
+            color: #45a29e; /* Cambia el color al pasar el mouse. */
+            transform: scale(1.1); /* Aumenta ligeramente el tamaño. */
         }
 
-        .accordion-button:not(.collapsed) {
-            color: #1e1e1e;
-            background-color: #66fcf1;
+        /* Navbar */
+        .navbar-dark .nav-link {
+            color: #c5c6c7; /* Color base de los enlaces de navegación. */
+            transition: color 0.3s; /* Transición suave para hover. */
         }
-        .accordion-button:hover {
-            background-color: #45a29e;
-            color: white;
+        .navbar-dark .nav-link:hover {
+            color: #66fcf1; /* Cambia a azul brillante en hover. */
         }
+
+        /* Botones personalizados */
         .btn-custom {
-            background-color: #66fcf1;
-            color: #1e1e1e;
-            border: none;
-            transition: all 0.3s ease-in-out;
+            background-color: #66fcf1; /* Fondo azul brillante. */
+            color: #1e1e1e; /* Texto oscuro para contraste. */
+            border: none; /* Sin bordes visibles. */
+            transition: all 0.3s ease-in-out; /* Suavidad en cambios. */
         }
         .btn-custom:hover {
-            background-color: #45a29e;
-            color: white;
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #45a29e; /* Verde en hover. */
+            color: white; /* Texto blanco en hover. */
+            transform: scale(1.05); /* Aumenta ligeramente el tamaño. */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera. */
         }
-        .rounded-circle {
-            border: 5px solid #66fcf1;
+
+        /* Animación de sacudida */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
         }
+
+        /* Botones con efecto de sacudida */
+        .btn-outline-light:hover,
+        .btn-custom:hover {
+            animation: shake 0.4s ease-in-out; /* Duración y suavidad de la animación */
+        }
+
+        /* Acordeones */
+        .accordion-item {
+            background-color: #1f2023; /* Fondo oscuro consistente con el diseño. */
+            border: 1px solid #66fcf1; /* Bordes azul brillante. */
+            border-radius: 5px; /* Esquinas redondeadas. */
+        }
+        .accordion-header {
+            color: #66fcf1; /* Color del texto del encabezado. */
+        }
+        .accordion-button {
+            background-color: #1f2023; /* Fondo del botón de los acordeones. */
+            color: #c5c6c7; /* Texto claro para mejor contraste. */
+            transition: all 0.3s ease-in-out; /* Suavidad en cambios. */
+        }
+        .accordion-button:not(.collapsed) {
+            color: #1e1e1e; /* Texto oscuro para contraste en estado activo. */
+            background-color: #66fcf1; /* Fondo azul brillante. */
+        }
+        .accordion-button:hover {
+            background-color: #45a29e; /* Fondo verde en hover. */
+            color: white; /* Texto blanco en hover. */
+        }
+        .accordion-body {
+            color: #c5c6c7; /* Texto claro para mejor legibilidad. */
+        }
+
+        /* Footer */
         footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #888;
+            text-align: center; /* Centrado. */
+            margin-top: 50px; /* Espaciado superior. */
+            color: #888; /* Texto gris tenue. */
         }
         footer a {
-            color: #66fcf1;
+            color: #66fcf1; /* Enlaces azul brillante. */
         }
         footer a:hover {
-            text-decoration: none;
-            color: #45a29e;
+            text-decoration: none; /* Sin subrayado. */
+            color: #45a29e; /* Cambia a verde en hover. */
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar: Contiene enlaces de navegación principales -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" href="#">Portfolio</a> <!-- Título o logo del sitio web. -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <!-- Ícono de menú para dispositivos móviles. -->
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- Contenedor para los enlaces de navegación. -->
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#bio">Bio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
@@ -115,91 +134,75 @@
         </div>
     </nav>
 
-    <!-- Main Section -->
+    <!-- Main Section: Presentación principal del portfolio -->
     <section id="main" class="container mt-5 text-center">
-        <h1>Pablo Techera</h1>
-        <img src="/media/avatar.jpeg" alt="Avatar" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
-        <p class="lead">Junior Python Developer | Data Analysis & APIs</p>
-        <a href="/media/curriculum_pab_tech.pdf" class="btn btn-custom mb-3" download>Download CV</a>
+        <h1>Pablo Techera</h1> <!-- Nombre del usuario con efecto hover. -->
+        <p class="lead">Junior Python Developer | Backend in Progress</p> <!-- Breve descripción del usuario. -->
+        <a href="/static/cv_pablo_techera.pdf" class="btn btn-custom mb-3" download>Download CV</a> <!-- Botón para descargar el CV. -->
         <div>
+            <!-- Enlaces a redes sociales principales -->
             <a href="https://www.linkedin.com/in/pablo-tech" class="btn btn-outline-light me-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/pablotech80" class="btn btn-outline-light" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
     </section>
 
-    <!-- Bio Section -->
-<section id="bio" class="container mt-5">
-    <h2 class="text-center">Bio</h2>
-    <div class="accordion mt-4" id="bioAccordion">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bioContent" aria-expanded="false" aria-controls="bioContent">
-                    About Me
-                </button>
-            </h2>
-            <div id="bioContent" class="accordion-collapse collapse" data-bs-parent="#bioAccordion">
-                <div class="accordion-body">
-                    <p>
-                        I'm a junior Python developer passionate about building scalable and efficient solutions.
-                        Focused on continuous learning, I specialize in Python development and actively improve
-                        my skills in SQL/NoSQL databases and Frameworks like Django.
-                        My projects, such as the API Body Analyzer, reflect my commitment to innovation and problem-solving.
-
-                    </p>
-                    <p>
-                        Explore my portfolio to learn more about my work, access my GitHub repositories, and download my résumé.
-                        Let’s connect and collaborate on impactful projects!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
     <!-- Education Section -->
     <section id="education" class="container mt-5">
         <h2 class="text-center">Education</h2>
         <div class="accordion mt-4" id="educationAccordion">
-            <!-- Tokio School: Python Developer Program -->
+            <!-- Python Developer Program -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#edu1" aria-expanded="false" aria-controls="edu1">
+                            data-bs-target="#pythonProgram" aria-expanded="false" aria-controls="pythonProgram">
                         2022 - 2024: Python Developer Program
                     </button>
                 </h2>
-                <div id="edu1" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div id="pythonProgram" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                     <div class="accordion-body">
-                        <p>Specialized in Python programming.</p>
+                        <p>
+                            Completed a comprehensive Python Developer Program at Tokio School,
+                            where I focused on preparing for the prestigious PCAP 31 certification.
+                            During this course, I developed a deep understanding of Python programming, including
+                            object-oriented programming (OOP), data structures, algorithms,
+                            and advanced Python concepts.
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- Tokio School: SQL Database Management -->
+            <!-- Database Management -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#edu2" aria-expanded="false" aria-controls="edu2">
-                        2024: SQL Database Management
+                            data-bs-target="#databaseManagement" aria-expanded="false" aria-controls="databaseManagement">
+                        2024: Database Management
                     </button>
                 </h2>
-                <div id="edu2" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div id="databaseManagement" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                     <div class="accordion-body">
-                        <p>Focused on SQL database management and development.</p>
+                        <p>
+                            Currently, studying database management with a focus on SQL and PostgreSQL,
+                            as well as NoSQL technologies like MongoDB. This course is helping me develop
+                            skills in database design, optimization, and query performance, while deepening
+                            my understanding of data modeling and management in modern applications.
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- Tokio School: English Studies -->
+            <!-- Scrum Master -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#edu3" aria-expanded="false" aria-controls="edu3">
-                        2024: Advanced English Studies
+                            data-bs-target="#scrumMaster" aria-expanded="false" aria-controls="scrumMaster">
+                        2024: Scrum Master
                     </button>
                 </h2>
-                <div id="edu3" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div id="scrumMaster" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
                     <div class="accordion-body">
-                        <p> Currently, studying English at Tokio School.</p>
+                        <p>
+                            I am currently enrolled in a Scrum Master course at Tokio School, where I am preparing for the first level of this widely-used agile methodology.
+                            This program is helping me develop skills in team coordination, efficient project management, and fostering collaboration to deliver high-quality results within set timelines.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -210,42 +213,45 @@
     <section id="skills" class="container mt-5">
         <h2 class="text-center">Skills</h2>
         <div class="accordion mt-4" id="skillsAccordion">
+            <!-- Backend Development -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#pythonSkills" aria-expanded="false" aria-controls="pythonSkills">
-                        Python
+                            data-bs-target="#backendSkills" aria-expanded="false" aria-controls="backendSkills">
+                        Backend Development
                     </button>
                 </h2>
-                <div id="pythonSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div id="backendSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
                     <div class="accordion-body">
-                        <p>Pandas, Tkinter, Flask, API, Django</p>
+                        <p>Python (Flask, Django, Tkinter), Pandas, API Development</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sqlSkills"
-                            aria-expanded="false" aria-controls="sqlSkills">
-                        SQL
-                    </button>
-                </h2>
-                <div id="sqlSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                    <div class="accordion-body">
-                        <p>PostgreSQL, MongoDB</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Database Management -->
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#containerSkills" aria-expanded="false" aria-controls="containerSkills">
-                        Containers & Virtualization
+                            data-bs-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
+                        Database Management
                     </button>
                 </h2>
-                <div id="containerSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div id="databaseSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
                     <div class="accordion-body">
-                        <p>Docker, VirtualBox</p>
+                        <p>PostgreSQL, MongoDB, SQL Query Optimization</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Infrastructure & Tools -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#infraToolsSkills" aria-expanded="false" aria-controls="infraToolsSkills">
+                        Infrastructure & Tools
+                    </button>
+                </h2>
+                <div id="infraToolsSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                    <div class="accordion-body">
+                        <p>Docker, Kubernetes, Redis, AWS, VirtualBox</p>
                     </div>
                 </div>
             </div>
@@ -265,12 +271,22 @@
                 </h2>
                 <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
                     <div class="accordion-body">
-                        <ul>
-                            <li>Conducted data analysis and cleansing for trading models.</li>
-                            <li>Developed Python scripts to preprocess data and identify key patterns.</li>
-                            <li>Used Docker, Kubernetes, AWS for efficient data scaling and storage.</li>
-                            <li>Optimized data processes, reducing processing time by 30%.</li>
-                        </ul>
+
+                        <p>
+                            Junior Python Developer
+                            Taunais Research – June 2023 – Present (Remote, Part-Time).
+                            As a Junior Python Developer at Taunais Research, I focus on ensuring the accuracy and integrity of market data while leveraging Python and modern backend technologies.
+                            My role involves analyzing and preprocessing large datasets, managing data pipelines, and optimizing database performance.
+                            In this position, I:
+                            Analyze large datasets to identify trends and maintain data accuracy.
+                            Write Python scripts for data cleaning, transformation, and preprocessing.
+                            Manage and optimize data pipelines using Docker and Kubernetes.
+                            Utilize AWS for scaling and securely storing trading-related data.
+                            Maintain MongoDB and Redis databases for fast and reliable data retrieval.
+                            Support senior developers in building robust and scalable software solutions.
+                            This role has allowed me to combine data handling and backend development in a dynamic, data-driven environment.
+                            I continue to collaborate with Taunais Research on an as-needed basis, contributing my expertise to their ongoing projects.
+                        <p>
                     </div>
                 </div>
             </div>
@@ -283,11 +299,22 @@
                 </h2>
                 <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
                     <div class="accordion-body">
-                        <ul>
-                            <li>Collaborated on data analysis projects with social impact.</li>
-                            <li>Performed Exploratory Data Analysis (EDA) to identify trends and insights.</li>
-                            <li>Improved precision and quality of insights using Python and optimization techniques.</li>
-                        </ul>
+                        <p>
+    I have been collaborating with Ignitus.org for over a year and five months, contributing to various data analysis projects.
+    My work involves performing exploratory data analysis (EDA) to clean and preprocess datasets and presenting the results effectively to project stakeholders.
+</p>
+<p>
+    Key responsibilities and achievements include:
+    - Conducting EDA to identify trends and patterns, ensuring clean and actionable datasets.
+    - Collaborating with team members to design and execute data-driven solutions.
+    - Presenting analytical findings in clear and concise formats to support decision-making.
+    - Gaining hands-on experience in real-world projects, enhancing both my technical and professional skills.
+</p>
+<p>
+    Ignitus.org offers a unique opportunity to work on professional projects in exchange for experience rather than monetary compensation.
+    Participating here has been incredibly rewarding and has positively impacted my growth as a data analyst and Python developer.
+</p>
+
                     </div>
                 </div>
             </div>
@@ -299,7 +326,7 @@
         <h2 class="text-center">Referral</h2>
         <blockquote class="blockquote text-center">
             <p>"I strongly recommend Pablo as a Junior Python Developer with exceptional potential and a proactive
-                pproach to learning and growth. His work with data management and analysis is commendable."</p>
+                approach to learning and growth. His work with data management and analysis is commendable."</p>
             <footer class="blockquote-footer">LinkedIn Recommendation</footer>
         </blockquote>
     </section>
