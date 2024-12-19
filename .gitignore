@@ -14,7 +14,9 @@ __pycache__/
 *.pot
 db.sqlite3
 *.sqlite3
-media/
+!media/*.md
+!media/example/
+
 staticfiles/
 
 # ==========================================
@@ -65,3 +67,10 @@ logs/
 # Exclusiones (si necesitas agregar algo al repo)
 # ==========================================
 !.gitignore
+
+celerybeat-schedule
+*.log.*
+
+docker-data/
+
+*/migrations/*.pyc
