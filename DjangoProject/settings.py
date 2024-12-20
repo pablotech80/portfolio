@@ -1,29 +1,23 @@
 
-
+from dotenv import load_dotenv
 from pathlib import Path
 import os
+
+# Cargar las variables de entorno desde .env
+load_dotenv()
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-kt^+e=gav_2m37*0@1x#iiim*9uicx396qo84!)=)j0i=&@%zs"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-
-# ALLOWED_HOSTS configurado manualmente para portafolio estático
-
-DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+#Seguridad
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 print(f"DEBUG is set to: {DEBUG}")
-
-
-ALLOWED_HOSTS = ['portfolio-production-5731.up.railway.app', 'localhost', '127.0.0.1']
-
-
+SECRET_KEY = os.getenv('SECRET_KEY', 'default-secret-key')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 # Application definition
 

@@ -1,30 +1,26 @@
-# Imagen base de Python
+### Dockerfile ###
+# Use the official Python image
 FROM python:3.11-slim
 
-# Instalar dependencias del sistema
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy requirements and install dependencies
+COPY requirements.txt .
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
     libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Crear el directorio de la aplicación
-WORKDIR /app
+# Copy the project files
+COPY . /app
 
-# Copiar los requisitos
-COPY requirements.txt /app/
-
-# Instalar dependencias de Python
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copiar el resto del proyecto
-COPY . /app/
-COPY ./media /app/media
-
-# Recolectar archivos estáticos
+# Collect static files
 RUN python manage.py collectstatic --noinput
 
-# Ejecutar migraciones
-RUN python manage.py migrate
+# Expose the application port
+EXPOSE 8000
 
-# Comando por defecto: Gunicorn
+# Start Gunicorn
 CMD ["gunicorn", "DjangoProject.wsgi:application", "--bind", "0.0.0.0:8000"]
