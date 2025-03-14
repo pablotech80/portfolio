@@ -9,9 +9,10 @@ urlpatterns = [
     path("", lambda request: render(request, "index.html"), name="home"),
 ]
 
-# Solo habilitar rutas de media si DEBUG=True
+# Solo habilitar rutas de media y estáticos si DEBUG=True
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])  # Servir estáticos
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # Servir media
 
 
 
