@@ -47,7 +47,7 @@ ROOT_URLCONF = "DjangoProject.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # Para plantillas globales, puedes agregar BASE_DIR / 'templates'
+        'DIRS': [BASE_DIR / "portfolio/templates"],  # Para plantillas globales, puedes agregar BASE_DIR / 'templates'
         'APP_DIRS': True,  # Habilita la búsqueda en app/templates
         'OPTIONS': {
             'context_processors': [
