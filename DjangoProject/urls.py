@@ -11,7 +11,7 @@ urlpatterns = [
 
 # Solo habilitar rutas de media y estáticos si DEBUG=True
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])  # Servir estáticos
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Servir estáticos
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  # Servir media
 
 
