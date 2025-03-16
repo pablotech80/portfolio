@@ -74,3 +74,4 @@ celerybeat-schedule
 docker-data/
 
 */migrations/*.pyc
+.vercel
