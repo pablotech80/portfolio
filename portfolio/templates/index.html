@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres, UTF-8 es el estándar para admitir caracteres especiales. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el diseño sea responsivo en dispositivos móviles. -->
-    <title>Portfolio - Pablo Techera</title> <!-- Título de la página mostrado en la pestaña del navegador. -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"> <!-- Carga las fuentes Manrope e Inter para títulos y contenido respectivamente. -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"> <!-- Incluye los estilos de Bootstrap para un diseño responsivo y moderno. -->
-    <!-- Icons -->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Carga los iconos de Font Awesome para usar en botones y enlaces. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Pablo Techera</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Aquí iría todo el CSS que ya has definido previamente */
         /* Estilo general del cuerpo */
         body {
             font-family: 'Inter', sans-serif; /* Fuente principal para el contenido. */
@@ -18,16 +16,23 @@
             color: #c5c6c7; /* Color de texto base. */
             animation: gradient-animation 6s infinite alternate; /* Animación sutil para el fondo. */
         }
+
         @keyframes gradient-animation {
-            0% { background-position: 0 50%; }
-            100% { background-position: 100% 50%; }
+            0% {
+                background-position: 0 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
         }
+
         /* Estilos para títulos */
         h1, h2, h3 {
             font-family: 'Manrope', sans-serif; /* Fuente secundaria para títulos. */
             color: #66fcf1; /* Azul brillante para títulos. */
             transition: all 0.5s ease-in-out; /* Transición suave para cambios en hover. */
         }
+
         h1:hover {
             color: #45a29e; /* Cambia el color al pasar el mouse. */
             transform: scale(1.1); /* Aumenta ligeramente el tamaño. */
@@ -38,6 +43,7 @@
             color: #c5c6c7; /* Color base de los enlaces de navegación. */
             transition: color 0.3s; /* Transición suave para hover. */
         }
+
         .navbar-dark .nav-link:hover {
             color: #66fcf1; /* Cambia a azul brillante en hover. */
         }
@@ -49,6 +55,7 @@
             border: none; /* Sin bordes visibles. */
             transition: all 0.3s ease-in-out; /* Suavidad en cambios. */
         }
+
         .btn-custom:hover {
             background-color: #45a29e; /* Verde en hover. */
             color: white; /* Texto blanco en hover. */
@@ -58,11 +65,21 @@
 
         /* Animación de sacudida */
         @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(0); }
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+            75% {
+                transform: translateX(-5px);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         /* Botones con efecto de sacudida */
@@ -77,37 +94,43 @@
             border: 1px solid #66fcf1; /* Bordes azul brillante. */
             border-radius: 5px; /* Esquinas redondeadas. */
         }
+
         .accordion-header {
             color: #66fcf1; /* Color del texto del encabezado. */
         }
+
         .accordion-button {
             background-color: #1f2023; /* Fondo del botón de los acordeones. */
             color: #c5c6c7; /* Texto claro para mejor contraste. */
             transition: all 0.3s ease-in-out; /* Suavidad en cambios. */
         }
+
         .accordion-button:not(.collapsed) {
             color: #1e1e1e; /* Texto oscuro para contraste en estado activo. */
             background-color: #66fcf1; /* Fondo azul brillante. */
         }
+
         .accordion-button:hover {
             background-color: #45a29e; /* Fondo verde en hover. */
             color: white; /* Texto blanco en hover. */
         }
+
         .accordion-body {
             color: #c5c6c7; /* Texto claro para mejor legibilidad. */
         }
+
         /* Ajuste de tamaño para el PDF */
         .pdf-container {
             width: 100%;
-            max-width: 800px;  /* Define un ancho máximo */
-            height: 500px;  /* Ajusta la altura */
-            margin: 0 auto;  /* Centra el elemento */
+            max-width: 800px; /* Define un ancho máximo */
+            height: 500px; /* Ajusta la altura */
+            margin: 0 auto; /* Centra el elemento */
         }
 
         .pdf-container iframe {
             width: 100%;
             height: 100%;
-            border: none;  /* Sin bordes */
+            border: none; /* Sin bordes */
         }
 
         /* Footer */
@@ -116,360 +139,402 @@
             margin-top: 50px; /* Espaciado superior. */
             color: #888; /* Texto gris tenue. */
         }
+
         footer a {
             color: #66fcf1; /* Enlaces azul brillante. */
         }
+
         footer a:hover {
-            text-decoration: none; /* Sin subrayado. */
+            /* Sin subrayado. */
+            text-decoration-line: none;
             color: #45a29e; /* Cambia a verde en hover. */
         }
     </style>
 </head>
 <body>
-    <!-- Navbar: Contiene enlaces de navegación principales -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a> <!-- Título o logo del sitio web. -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> <!-- Ícono de menú para dispositivos móviles. -->
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <!-- Contenedor para los enlaces de navegación. -->
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#bio">Bio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#softSkills">Soft skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#referral">Referral</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#aspirations">Aspirations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#bio">Bio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Educación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#softSkills">Soft skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#referral">Referencias</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aspirations">Aspiraciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certificados</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
         </div>
-    </nav>
-    <!-- Main Section: Presentación principal del portfolio -->
-    <section id="main" class="container mt-5 text-center">
-        <h1>Pablo Techera</h1> <!-- Nombre del usuario con efecto hover. -->
-        <p class="lead">Python Developer | AI Enthusiast | SQL & Automation</p> <!-- Breve descripción del usuario. -->
-        <a href="static/cv_pt_spanish.pdf" class="btn btn-custom mb-3" download>Download CV</a> <!-- Botón para descargar el CV. -->
-        <div>
-            <!-- Enlaces a redes sociales principales -->
-            <a href="https://www.linkedin.com/in/pablo-tech" class="btn btn-outline-light me-2" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/pablotech80" class="btn btn-outline-light" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </div>
-    </section>
-    <!-- Bio Section -->
-    <section id="bio" class="container mt-5">
-        <h2 class="text-center">Bio</h2>
-        <div class="accordion mt-4" id="bioAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bioContent" aria-expanded="false" aria-controls="bioContent">
-                        About Me
-                    </button>
-                </h2>
-                <div id="bioContent" class="accordion-collapse collapse" data-bs-parent="#bioAccordion">
-                    <div class="accordion-body">
-                        <p>
-                            I’m Pablo Techera, a data analysis and software development enthusiast with experience in creating scalable technological solutions.
-                            My approach combines analytical thinking, problem-solving, and a strong focus on optimization and process automation.
-                        </p>
-                        <p>
-                            Throughout my journey, I have developed projects like the BioAnalyze API, which enables advanced biometric analysis,
-                            and various applications integrating Python, SQL, Docker, and cloud deployment. Currently, at Taunais Research LLC,
-                            I optimize data management for trading models, leveraging tools such as PostgreSQL, MongoDB, and Kubernetes.
-                        </p>
-                        <p>
-                            My soft skills include autonomy, adaptability, and continuous learning, allowing me to tackle new challenges with a proactive mindset.
-                            I enjoy working in collaborative environments where I can contribute innovative solutions and continue growing as a developer.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Education Section -->
-    <section id="education" class="container mt-5">
-        <h2 class="text-center">Education</h2>
-        <div class="accordion mt-4" id="educationAccordion">
-            <!-- Python Developer Program -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#pythonProgram" aria-expanded="false" aria-controls="pythonProgram">
-                        2022 - 2024: Python Developer Program
-                    </button>
-                </h2>
-                <div id="pythonProgram" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-                    <div class="accordion-body">
-                        <p>
-                            Completed a comprehensive Python Developer Program at Tokio School,
-                            where I focused on preparing for the prestigious PCAP 31 certification.
-                            During this course, I developed a deep understanding of Python programming, including
-                            object-oriented programming (OOP), data structures, algorithms,
-                            and advanced Python concepts.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Database Management -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#databaseManagement" aria-expanded="false" aria-controls="databaseManagement">
-                        2024: Database Management
-                    </button>
-                </h2>
-                <div id="databaseManagement" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-                    <div class="accordion-body">
-                        <p>
-                            Currently, studying database management with a focus on SQL and PostgreSQL,
-                            as well as NoSQL technologies like MongoDB. This course is helping me develop
-                            skills in database design, optimization, and query performance, while deepening
-                            my understanding of data modeling and management in modern applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!-- Certification in ChatGPT Prompt Engineering for Developers -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#promptengineeringfordevelopers" aria-expanded="false"
-                            aria-controls="promptengineeringfordevelopers">
-                        2024: Certification in ChatGPT Prompt Engineering for Developers
-                    </button>
-                </h2>
-                <div id="promptengineeringfordevelopers" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-                    <div class="accordion-body">
+    </div>
+</nav>
+<!-- Main Section -->
+<section id="main" class="container mt-5 text-center">
+    <h1>Pablo Techera</h1>
+    <p class="lead">Python Developer | AI Enthusiast | SQL & Automation</p>
+    {% load static %}
+    <div class="d-flex justify-content-center flex-wrap gap-2 mt-2 mb-3">
+        <a href="{% static 'cv/cv_pablo_techera_es.txt' %}" class="btn btn-custom btn-outline-light btn-sm me-sm-2" download>Download CV (Español)</a>
+        <a href="{% static 'cv/cv_pablo_techera_en.txt' %}" class="btn btn-custom btn-outline-light btn-sm me-sm-2" download>Download CV (English)</a>
+    </div>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mt-2 mb-3">
+        <a href="https://www.linkedin.com/in/pablo-tech" class="btn btn-outline-light me-sm-1" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/pablotech80" class="btn btn-outline-light me-sm-3" target="_blank">
+            <i class="fab fa-github"></i> GitHub</a>
+    </div> <!-- Cerré correctamente el div faltante -->
+</section>
+<!-- Bio Section -->
+<section id="bio" class="container mt-5">
+    <h2 class="text-center">Bio</h2>
+    <div class="accordion mt-4" id="bioAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#bioContent" aria-expanded="false" aria-controls="bioContent">
+                    Sobre mí
+                </button>
+            </h2>
+            <div id="bioContent" class="accordion-collapse collapse" data-bs-parent="#bioAccordion">
+                <div class="accordion-body">
+
                     <p>
-                        In 2024, I successfully completed the ChatGPT Prompt Engineering for Developers course by OpenAI,
-                        gaining advanced skills in crafting effective prompts for large language models (LLMs).
-                        This course covered the fundamentals of Prompt Engineering, focusing on optimizing responses in ChatGPT through effective prompting techniques.
-                        It provided insights into summarizing, inferring, transforming, and expanding information using AI. Additionally,
-                        I learned how to implement strategies to maximize the performance of OpenAI models for specific tasks.
-                        This knowledge allows me to develop intelligent and efficient solutions by fully leveraging the capabilities of LLMs in various applications.
-                        Certification issued by: OpenAI
+                    Soy Pablo Techera, desarrollador backend en formación continua con experiencia práctica en Python,
+                        desarrollo de API REST y bases de datos PostgreSQL.
+                        Me apasiona construir soluciones funcionales que optimicen procesos reales,
+                        y mi enfoque se basa en la mejora continua, el aprendizaje aplicado y la responsabilidad profesional.
+                    </p>
+
+                    <p>
+                    Recientemente, participé en el proyecto Extranet del Grupo Vemare (Polaris),
+                        donde implementé funcionalidades backend como la gestión de visitas,
+                        exportación de informes, cálculo de clasificación por potencial y envío de notificaciones,
+                        trabajando con tecnologías como TurboGears 2, SQLAlchemy y arquitectura MVC.
+                    </p>
+                    He desarrollado proyectos como la API BioAnalyze,
+                    orientada al análisis biométrico y nutricional, y otras aplicaciones que integran Python,
+                    SQL y Docker para el procesamiento de datos.
+                    También colaboro con Taunais Research LLC en tareas de mantenimiento de API y optimización de bases
+                    de datos,
+                    participando en proyectos relacionados con modelos de trading y automatización de procesos.
+                    <p>
+                    Me considero una persona autodidacta, adaptable y resolutiva,
+                        con una fuerte motivación por crecer como desarrollador.
+                        Disfruto aprender en entornos colaborativos, aportar soluciones útiles y
+                        enfrentar nuevos desafíos con una mentalidad proactiva.
                     </p>
                 </div>
             </div>
-            </div>
-            <!-- Scrum Master -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#scrumMaster" aria-expanded="false" aria-controls="scrumMaster">
-                        2024: Scrum Master
-                    </button>
-                </h2>
-                <div id="scrumMaster" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
-                    <div class="accordion-body">
-                        <p>
-                            I am currently enrolled in a Scrum Master course at Tokio School,
-                            where I am preparing for the first level of this widely-used agile methodology.
-                            This program is helping me develop skills in team coordination,
-                            efficient project management, and fostering collaboration to deliver high-quality results within set timelines.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="container mt-5">
-        <h2 class="text-center">Skills</h2>
-        <div class="accordion mt-4" id="skillsAccordion">
-            <!-- Backend Development -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#backendSkills" aria-expanded="false" aria-controls="backendSkills">
-                        Backend Development
-                    </button>
-                </h2>
-                <div id="backendSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                    <div class="accordion-body">
-                        <p>Python (Flask, Django, Tkinter), Pandas, API Development</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Database Management -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
-                        Database Management
-                    </button>
-                </h2>
-                <div id="databaseSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                    <div class="accordion-body">
-                        <p>PostgreSQL, MongoDB, SQL Query Optimization</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Infrastructure & Tools -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#infraToolsSkills" aria-expanded="false" aria-controls="infraToolsSkills">
-                        Infrastructure & Tools
-                    </button>
-                </h2>
-                <div id="infraToolsSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                    <div class="accordion-body">
-                        <p>Docker, Kubernetes, Redis, AWS, VirtualBox</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Soft Skills -->
-    <section id="softSkills" class="container mt-5">
-        <h2 class="text-center">Soft Skills</h2>
-        <div class="accordion mt-4" id="skillsAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#softSkillsCollapse" aria-expanded="false" aria-controls="softSkillsCollapse">
-                        Soft Skills
-                    </button>
-                </h2>
-                <div id="softSkillsCollapse" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
-                    <div class="accordion-body">
-                        <ul>
-                            <li>Communication</li>
-                            <li>Teamwork</li>
-                            <li>Problem-Solving</li>
-                            <li>Adaptability</li>
-                            <li>Time Management</li>
-                            <li>Critical Thinking</li>
-                            <li>Leadership</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience" class="container mt-5">
-        <h2 class="text-center">Experience</h2>
-        <div class="accordion mt-4" id="experienceAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#exp1" aria-expanded="false" aria-controls="exp1">
-                        Taunais Research LLC - Junior Python Developer
-                    </button>
-                </h2>
-                <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                    <div class="accordion-body">
+    </div>
+</div>  
+</section>
+<!-- Education Section -->
+<section id="education" class="container mt-5">
+    <h2 class="text-center">Educación</h2>
+    <div class="accordion mt-4" id="educationAccordion">
+        <!-- Python Developer Program -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#pythonProgram" aria-expanded="false" aria-controls="pythonProgram">
+                    2022 - 2024: Python Developer Program
+                </button>
+            </h2>
+            <div id="pythonProgram" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div class="accordion-body">
+                    <p>
+                    Completé el programa de Desarrollador Python en Tokio School, donde me preparé para la certificación PCAP 31.
+                    Durante el curso adquirí una comprensión sólida del lenguaje Python,
+                        incluyendo programación orientada a objetos (OOP),
+                        estructuras de datos, algoritmos y conceptos avanzados.
+                    </p>
 
-                        <p>
-                            Junior Python Developer
-                            Taunais Research – June 2023 – Present (Remote, Part-Time).
-                            As a Junior Python Developer at Taunais Research, I focus on ensuring the accuracy and integrity of market data while leveraging Python and modern backend technologies.
-                            My role involves analyzing and preprocessing large datasets, managing data pipelines, and optimizing database performance.
-                            In this position, I:
-                            Analyze large datasets to identify trends and maintain data accuracy.
-                            Write Python scripts for data cleaning, transformation, and preprocessing.
-                            Manage and optimize data pipelines using Docker and Kubernetes.
-                            Utilize AWS for scaling and securely storing trading-related data.
-                            Maintain MongoDB and Redis databases for fast and reliable data retrieval.
-                            Support senior developers in building robust and scalable software solutions.
-                            This role has allowed me to combine data handling and backend development in a dynamic, data-driven environment.
-                            I continue to collaborate with Taunais Research on an as-needed basis, contributing my expertise to their ongoing projects.
-                        <p>
-                    </div>
                 </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2">
-                        Ignitus.org - Junior Python Developer
-                    </button>
-                </h2>
-                <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-                    <div class="accordion-body">
-                        <p>
-    I have been collaborating with Ignitus.org for over a year and five months, contributing to various data analysis projects.
-    My work involves performing exploratory data analysis (EDA) to clean and preprocess datasets and presenting the results effectively to project stakeholders.
-</p>
-<p>
-    Key responsibilities and achievements include:
-    - Conducting EDA to identify trends and patterns, ensuring clean and actionable datasets.
-    - Collaborating with team members to design and execute data-driven solutions.
-    - Presenting analytical findings in clear and concise formats to support decision-making.
-    - Gaining hands-on experience in real-world projects, enhancing both my technical and professional skills.
-</p>
-<p>
-    Ignitus.org offers a unique opportunity to work on professional projects in exchange for experience rather than monetary compensation.
-    Participating here has been incredibly rewarding and has positively impacted my growth as a data analyst and Python developer.
-</p>
+        </div>
+        <!-- Database Management -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#databaseManagement" aria-expanded="false" aria-controls="databaseManagement">
+                    2024: Database Management
+                </button>
+            </h2>
+            <div id="databaseManagement" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div class="accordion-body">
+                    <p>
+                    Actualmente, estoy cursando un programa de Gestión de Bases de Datos con enfoque en SQL y PostgreSQL,
+                        así como también en tecnologías NoSQL como MongoDB.
+                    Este curso me está ayudando a desarrollar habilidades en diseño de bases de datos,
+                        optimización de consultas y rendimiento, profundizando en el modelado
+                        y la gestión de datos en aplicaciones modernas.
+                    </p>
 
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Referral Section -->
-    <section id="referral" class="container mt-5">
-        <h2 class="text-center">Referral</h2>
-        <blockquote class="blockquote text-center">
-            <p>"I strongly recommend Pablo as a Junior Python Developer with exceptional potential and a proactive
-                approach to learning and growth. His work with data management and analysis is commendable."</p>
-            <footer class="blockquote-footer">LinkedIn Recommendation</footer>
-        </blockquote>
-    </section>
-    <!-- Aspirations Section -->
-    <section id="aspirations" class="container mt-5">
-        <h2 class="text-center">Aspirations</h2>
-        <p>
-            My objective is to continue developing as a Python developer, expanding my skills in backend and frontend development.
-            I am eager to participate in challenging projects where I can contribute my knowledge in Python, SQL,
-            and agile methodologies, while growing as a professional.
-        </p>
-    </section>
-    <!-- Certifications Section -->
-    <section id="certifications" class="container mt-5">
-        <h2 class="text-center">Certifications</h2>
-        <div class="accordion mt-4" id="certificationsAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#certification1" aria-expanded="false" aria-controls="certification1">
-                        Programación Python - Certificación PCAP
-                    </button>
-                </h2>
-                <div id="certification1" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
-                    <div class="accordion-body text-center">
-                        <p><strong>Issued by:</strong> Tokio School</p>
-                        <p><strong>Date:</strong> November 22, 2024</p>
-                        <!-- Mostrar PDF solo cuando el acordeón está desplegado -->
-                        <iframe src="/static/certifications/diploma1.pdf" width="100%" height="600px"></iframe>
-                    </div>
+        <!-- Certification in ChatGPT Prompt Engineering for Developers -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#promptengineeringfordevelopers" aria-expanded="false"
+                        aria-controls="promptengineeringfordevelopers">
+                    2024: Certification in ChatGPT Prompt Engineering for Developers
+                </button>
+            </h2>
+            <div id="promptengineeringfordevelopers" class="accordion-collapse collapse"
+                 data-bs-parent="#educationAccordion">
+                <div class="accordion-body">
+                    <p>
+                    En 2024 completé con éxito el curso "ChatGPT Prompt Engineering for Developers" impartido por OpenAI.
+                    Durante esta formación, adquirí habilidades avanzadas para diseñar prompts efectivos orientados a modelos de lenguaje como ChatGPT.
+                    Aprendí técnicas para optimizar respuestas, resumir, inferir, transformar y expandir información mediante inteligencia artificial,
+                        así como estrategias para aprovechar al máximo el rendimiento de los modelos de OpenAI en tareas específicas.
+                    </p>
+                    <p>
+                    <strong>Certificación emitida por:</strong> OpenAI
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="container mt-5">
-        <h2 class="text-center">Contact</h2>
-        <p class="text-center">Feel free to reach out via email or connect on my social networks.</p>
-        <div class="text-center">
-            <a href="mailto:ptecherasosa@icloud.com" class="btn btn-custom"><i class="fas fa-envelope"></i> Email Me</a>
+        <!-- Scrum Master -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#scrumMaster" aria-expanded="false" aria-controls="scrumMaster">
+                    2024: Scrum Master
+                </button>
+            </h2>
+            <div id="scrumMaster" class="accordion-collapse collapse" data-bs-parent="#educationAccordion">
+                <div class="accordion-body">
+                    <p>
+                    Actualmente, estoy realizando un curso de Scrum Master en Tokio School,
+                        donde me estoy preparando para obtener la certificación de nivel inicial en esta metodología ágil ampliamente utilizada.
+                    Esta formación me está ayudando a desarrollar habilidades en coordinación de equipos,
+                        gestión eficiente de proyectos y fomento de la colaboración para alcanzar resultados de calidad dentro de los plazos establecidos.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="text-center mt-4">
-            <a href="https://www.linkedin.com/in/pablo-tech" target="_blank" class="btn btn-outline-light me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/pablotech80" target="_blank" class="btn btn-outline-light"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="container mt-5">
+    <h2 class="text-center">Skills</h2>
+    <div class="accordion mt-4" id="skillsAccordion">
+        <!-- Backend Development -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#backendSkills" aria-expanded="false" aria-controls="backendSkills">
+                    Backend Development
+                </button>
+            </h2>
+            <div id="backendSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    <p>Python (Flask, Django, Tkinter), Pandas, API Development</p>
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Pablo Techera | Powered by Django</p>
-    </footer>
-    <!-- Bootstrap JS -->
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Database Management -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
+                    Database Management
+                </button>
+            </h2>
+            <div id="databaseSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    <p>PostgreSQL, MongoDB, SQL Query Optimisation</p>
+                </div>
+            </div>
+        </div>
+        <!-- Infrastructure & Tools -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#infraToolsSkills" aria-expanded="false" aria-controls="infraToolsSkills">
+                    Infrastructure & Tools
+                </button>
+            </h2>
+            <div id="infraToolsSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion">
+                <div class="accordion-body">
+                    <p>Docker, Kubernetes, Redis, AWS, VirtualBox</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Soft Skills Section -->
+<section id="softSkills" class="container mt-5">
+    <h2 class="text-center">Soft Skills</h2>
+    <div class="accordion mt-4" id="softSkillsAccordion"> <!-- Cambié el ID del acordeón -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#softSkillsCollapse" aria-expanded="false" aria-controls="softSkillsCollapse">
+                    Soft Skills
+                </button>
+            </h2>
+            <div id="softSkillsCollapse" class="accordion-collapse collapse" data-bs-parent="#softSkillsAccordion">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Comunicación</li>
+                        <li>Teamwork</li>
+                        <li>Resolución de problemas</li>
+                        <li>Adaptabilidad</li>
+                        <li>Gestión del tiempo</li>
+                        <li>Pensamiento crítico</li>
+                        <li>Liderazgo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Experiencia -->
+<section id="experience" class="container mt-5">
+  <h2 class="text-center">Experiencia</h2>
+  <div class="accordion mt-4" id="experienceAccordion">
+
+    <!-- Polaris / Vemare -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#exp1" aria-expanded="false" aria-controls="exp1">
+          Grupo Vemare (Proyecto Polaris) – Backend Developer
+        </button>
+      </h2>
+      <div id="exp1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <p>
+            Participé en el desarrollo backend del sistema Extranet corporativo del Grupo Vemare, como parte del proyecto Polaris.
+            Trabajé con TurboGears 2, PostgreSQL y arquitectura MVC, implementando funcionalidades como la gestión de visitas,
+            cálculos, exportación de informes Excel y lógica de envío de notificaciones por correo.
+            También tuve contacto directo con servicios en la nube mediante Azure, trabajo remoto a través de VPN,
+            y control de versiones con Git.
+            Esta experiencia me permitió aplicar buenas prácticas en un entorno empresarial real y reforzar mi compromiso con el aprendizaje continuo y el trabajo colaborativo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taunais Research -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2">
+          Taunais Research LLC – Python Developer
+        </button>
+      </h2>
+      <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <p>
+            Como desarrollador Python en Taunais Research LLC, participé en el mantenimiento y desarrollo de API en Flask y Django,
+            orientadas a la gestión de datos para modelos de trading.
+            Mis tareas incluyeron el análisis y limpieza de datasets con Pandas, consultas SQL complejas en PostgreSQL y MongoDB,
+            y la optimización de pipelines de datos.
+            También utilicé Docker para entornos de prueba y trabajé en colaboración remota bajo metodología ágil con Git y Jira.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ignitus -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#exp3" aria-expanded="false" aria-controls="exp3">
+          Ignitus.org – Python Developer (Voluntariado)
+        </button>
+      </h2>
+      <div id="exp3" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+        <div class="accordion-body">
+          <p>
+            Colaboré como voluntario en Ignitus.org durante más de un año, aportando en proyectos de análisis de datos
+            y desarrollo de herramientas con Python.
+            Me encargué de realizar análisis exploratorio de datos (EDA), limpieza y visualización,
+            así como la presentación de resultados al equipo para apoyar la toma de decisiones.
+            Esta experiencia me permitió fortalecer habilidades técnicas y profesionales en un entorno colaborativo internacional.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Referral Section -->
+<section id="referral" class="container mt-5">
+    <h2 class="text-center">Referencias</h2>
+    <blockquote class="blockquote text-center">
+        <p>"Recomiendo encarecidamente a Pablo como Desarrollador Junior de Python
+            con un potencial excepcional y un enfoque proactivo hacia el aprendizaje y el crecimiento.
+            Su trabajo con la gestión y el análisis de datos es digno de elogio."</p>
+        <footer class="blockquote-footer">LinkedIn Recommendation</footer>
+    </blockquote>
+</section>
+<!-- Aspirations Section -->
+<section id="aspirations" class="container mt-5">
+    <h2 class="text-center">Aspiraciones</h2>
+    <p>
+    Mi objetivo es seguir desarrollándome como desarrollador backend,
+        consolidando mis conocimientos en Python, bases de datos relacionales
+        y desarrollo de API.
+    Me interesa participar en proyectos desafiantes donde pueda aplicar
+        mis habilidades técnicas, aprender nuevas herramientas y metodologías,
+        y crecer dentro de un entorno profesional colaborativo y con buenas prácticas.
+    </p>
+
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="container mt-5">
+    <h2 class="text-center">Certificaciones</h2>
+    <div class="accordion mt-4" id="certificationsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#certification1" aria-expanded="false" aria-controls="certification1">
+                    Programación Python - Certificación PCAP
+                </button>
+            </h2>
+            <div id="certification1" class="accordion-collapse collapse" data-bs-parent="#certificationsAccordion">
+                <div class="accordion-body text-center">
+                    <p><strong>Issued by:</strong> Tokio School</p>
+                    <p><strong>Date:</strong> November 22, 2024</p>
+                    <iframe src="/static/certifications/diploma1.pdf" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="container mt-5">
+    <h2 class="text-center">Contacto</h2>
+    <p class="text-center">No dudes en contactarme por correo electrónico o conectarte en mis redes sociales.</p>
+    <div class="text-center">
+        <a href="mailto:ptecherasosa@icloud.com" class="btn btn-custom"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+    <div class="text-center mt-4">
+        <a href="https://www.linkedin.com/in/pablo-tech" target="_blank" class="btn btn-outline-light me-2"><i
+                class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/pablotech80" target="_blank" class="btn btn-outline-light"><i
+                class="fab fa-github"></i> GitHub</a>
+    </div>
+</section>
+<!-- Footer -->
+<footer>
+    <p>© 2024 Pablo Techera | Powered by Django</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
