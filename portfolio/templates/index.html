@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -179,7 +180,6 @@
 <section id="main" class="container mt-5 text-center">
     <h1>Pablo Techera</h1>
     <p class="lead">Python Developer | AI Enthusiast | SQL & Automation</p>
-    {% load static %}
     <div class="d-flex justify-content-center flex-wrap gap-2 mt-2 mb-3">
         <a href="{% static 'cv/cv_pablo_techera_es.txt' %}" class="btn btn-custom btn-outline-light btn-sm me-sm-2" download>Download CV (Español)</a>
         <a href="{% static 'cv/cv_pablo_techera_en.txt' %}" class="btn btn-custom btn-outline-light btn-sm me-sm-2" download>Download CV (English)</a>
