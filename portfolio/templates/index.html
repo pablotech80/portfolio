@@ -50,6 +50,11 @@
             transform: scale(1.1); /* Aumenta ligeramente el tamaño. */
         }
 
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
         /* Navbar */
         .navbar-dark .nav-link {
             color: #c5c6c7; /* Color base de los enlaces de navegación. */
@@ -75,6 +80,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera. */
         }
 
+        .btn-custom, .btn-outline-light {
+            min-width: 180px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 5px;
+        }
         /* Animación de sacudida */
         @keyframes shake {
             0% {
@@ -127,8 +140,11 @@
             color: white; /* Texto blanco en hover. */
         }
 
-        .accordion-body {
+        .accordion-body p, .accordion-body ul {
             color: #c5c6c7; /* Texto claro para mejor legibilidad. */
+            text-align: left; /* izquierda. */
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
         /* Ajuste de tamaño para el PDF */
@@ -143,12 +159,15 @@
             width: 100%;
             height: 100%;
             border: none; /* Sin bordes */
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            border-radius: 10px;
         }
 
         /* Footer */
         footer {
             text-align: center; /* Centrado. */
-            margin-top: 50px; /* Espaciado superior. */
+            margin-top: 80px; /* Espaciado superior. */
+            padding: 20px 0; /* Espacio inferior. */
             color: #888; /* Texto gris tenue. */
         }
 
@@ -160,6 +179,21 @@
             /* Sin subrayado. */
             text-decoration-line: none;
             color: #45a29e; /* Cambia a verde en hover. */
+        }
+
+        section {
+            text-align: center;
+            margin: 60px auto;
+            padding: 0 20px;
+            max-width: 1000px;
+        }
+
+        section p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -223,12 +257,14 @@
                         exportación de informes, cálculo de clasificación por potencial y envío de notificaciones,
                         trabajando con tecnologías como TurboGears 2, SQLAlchemy y arquitectura MVC.
                     </p>
+                    <p>
                     He desarrollado proyectos como la API BioAnalyze,
                     orientada al análisis biométrico y nutricional, y otras aplicaciones que integran Python,
                     SQL y Docker para el procesamiento de datos.
                     También colaboro con Taunais Research LLC en tareas de mantenimiento de API y optimización de bases
                     de datos,
                     participando en proyectos relacionados con modelos de trading y automatización de procesos.
+                    </p>
                     <p>
                     Me considero una persona autodidacta, adaptable y resolutiva,
                         con una fuerte motivación por crecer como desarrollador.
@@ -239,7 +275,6 @@
             </div>
         </div>
     </div>
-</div>  
 </section>
 <!-- Education Section -->
 <section id="education" class="container mt-5">
@@ -493,13 +528,12 @@
     <h2 class="text-center">Aspiraciones</h2>
     <p>
     Mi objetivo es seguir desarrollándome como desarrollador backend,
-        consolidando mis conocimientos en Python, bases de datos relacionales
-        y desarrollo de API.
+    consolidando mis conocimientos en Python, bases de datos relacionales
+    y desarrollo de API.
     Me interesa participar en proyectos desafiantes donde pueda aplicar
-        mis habilidades técnicas, aprender nuevas herramientas y metodologías,
-        y crecer dentro de un entorno profesional colaborativo y con buenas prácticas.
+    mis habilidades técnicas, aprender nuevas herramientas y metodologías,
+    y crecer dentro de un entorno profesional colaborativo y con buenas prácticas.
     </p>
-
 </section>
 <!-- Certifications Section -->
 <section id="certifications" class="container mt-5">
@@ -541,7 +575,7 @@
 </section>
 <!-- Footer -->
 <footer>
-    <p>© 2024 Pablo Techera | Powered by Django</p>
+  <p>© 2024 Pablo Techera | Backend Developer | Powered by Django</p>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
