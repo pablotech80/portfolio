@@ -1,6 +1,7 @@
 
 from dotenv import load_dotenv
 from pathlib import Path
+import cloudinary
 import os
 
 # Cargar las variables de entorno desde .env
@@ -125,3 +126,9 @@ MEDIA_URL = '/media/'
 
 # WhiteNoise Settings
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+cloudinary.config(
+    cloud_name='dyanbg7xs',
+    api_key=os.getenv('CLOUDINARY_URL').split(':')[1].replace('//', ''),
+    api_secret=os.getenv('CLOUDINARY_URL').split(':')[2].split('@')[0]
+)

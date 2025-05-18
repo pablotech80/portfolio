@@ -10,3 +10,4 @@ setuptools==75.6.0
 sqlparse==0.5.2
 typing_extensions==4.12.2
 whitenoise==6.5.0
+cloudinary~=1.44.0
